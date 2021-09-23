@@ -13,11 +13,7 @@ plugins {
 
 group 'mmv2-replication-policies'
 
-version '0.1.0'
-
-jar {
-    baseName 'IdentityReplicationPolicy'
-}
+version '1.0.0'
 
 repositories {
     // Use JCenter for resolving dependencies.
@@ -25,7 +21,11 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.apache.kafka:connect-mirror-client:2.6.0'
-    compileOnly 'org.apache.kafka:connect-mirror:2.6.0'
+    compileOnly 'org.apache.kafka:connect-mirror-client:2.8.0'
+    compileOnly 'org.apache.kafka:connect-mirror:2.8.0'
 
+}
+
+jar {
+    archiveBaseName = 'IdentityReplicationPolicy'
 }
